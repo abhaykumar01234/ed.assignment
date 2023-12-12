@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;900&family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Raleway, sans-serif;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.inline.wrap {
+  flex-wrap: wrap;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.layout > header,
+.layout > footer {
+  padding: 1rem max(calc(50vw - 600px), 1rem);
+}
+
+.layout > footer {
+  background-color: #172146;
+  color: #fff;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.layout main {
+  background: #f2f6ff;
+  padding: 1rem max(calc(50vw - 520px), 1rem);
+}
+
+.logo > div {
+  font-size: 2.1em;
+  text-transform: uppercase;
+  font-weight: 900;
+  background-image: linear-gradient(269deg, #0048ff, #0096ff),
+    linear-gradient(#000, #000);
+  color: #0084ff;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo > p {
+  font-weight: 500;
+  font-style: italic;
+}
+
+.filter > img {
+  width: 25px;
+}
+
+.tag {
+  all: unset;
+  color: #0084ff;
+  border-radius: 15px;
+  border: 1px solid #0084ff;
+  cursor: pointer;
+  padding: 6px 14px;
+  font-size: 12px;
+}
+
+.tag.active {
+  background: linear-gradient(269deg, #0048ff, #0096ff);
+  color: #fff;
+}
+
+.cardWrapper {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+}
+
+.cardWrapper .card {
+  background: #fff;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.cardWrapper .card img {
+  width: 100%;
+}
+
+.cardWrapper .content {
+  padding: 1.5rem;
+}
+
+.cardWrapper .content p:nth-child(3) {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+}
+
+.cardWrapper .content time {
+  font-variant-numeric: tabular-nums;
+  font-family: sans-serif;
+}
+
+.blue {
+  color: #0048ff;
+  font-weight: 500;
+  font-style: italic;
+}
